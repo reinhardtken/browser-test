@@ -25,7 +25,10 @@
             text2.addEventListener('keydown', (event) => {
                 // event.preventDefault();
                 //event.stopPropagation();
-                console.info("hello world...")
+                console.info("keyCode: " + event.code)
+                console.info("altKey: " + event.altKey)
+                console.info("ctrlKey: " + event.ctrlKey)
+                console.info("metaKey: " + event.metaKey)
             });
 
             document.addEventListener('keydown', (event) => {
