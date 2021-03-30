@@ -13,73 +13,72 @@
             return ClassElements;
         }
         window.onload=function(){
-            HotKeyHandler.Init();
+            // HotKeyHandler.Init();
 
-            var textA = document.getElementById("test-text")
-            textA.onkeydown=function(event) {
-                console.info("getElementById handler run...")
-                return true;
-            }
-            textA.addEventListener('paste', (event) => {
-                let paste = (event.clipboardData || window.clipboardData).getData('text');
-                paste = paste.toUpperCase();
-
-                const selection = window.getSelection();
-                if (!selection.rangeCount) return false;
-                selection.deleteFromDocument();
-                selection.getRangeAt(0).insertNode(document.createTextNode(paste));
-
-                event.preventDefault();
+            var text1 = document.getElementById("test-text1")
+            text1.addEventListener('keydown', (event) => {
+                // event.preventDefault();
+                // event.cancelBubble=true;
             });
-        }
-        var HotKeyHandler={
-            currentMainKey:null,
-            currentValueKey:null,
-            Init:function(){
-                // HotKeyHandler.Register(0,"K",function(){alert("注册成功");});
-                HotKeyHandler.Register(0,"Z",function(){
-                    console.info("HotKeyHandler handler run...")
-                    return false;
-                    // var e = getElementsByClassName("targeNode", "p")
-                    // e.innerHTML="execute a paste"
-                });
-            },
-            Register:function(tag,value,func){
-                var MainKey="";
-                switch(tag){
-                    case 0:
-                        MainKey=17; //Ctrl
-                        break;
-                    case 1:
-                        MainKey=16; //Shift
-                        break;
-                    case 2:
-                        MainKey="18"; //Alt
-                        break;
-                }
-                document.onkeyup=function(e){
-                    HotKeyHandler.currentMainKey=null;
-                }
 
-                document.onkeydown=function(event){
-//获取键值
-                    var keyCode= event.keyCode ;
-                    var keyValue = String.fromCharCode(event.keyCode);
+            var text2 = document.getElementById("test-text2")
+            text2.addEventListener('keydown', (event) => {
+                // event.preventDefault();
+                //event.stopPropagation();
+                console.info("hello world...")
+            });
 
-                    if(HotKeyHandler.currentMainKey!=null){
-                        if(keyValue==value){
-                            HotKeyHandler.currentMainKey=null;
-                            if(func!=null) {
-                                event.returnValue = func();
-                            }
-                        }
-                    }
-                    if(keyCode==MainKey) {
-                        HotKeyHandler.currentMainKey = keyCode;
-                    }
-                }
-            }
+            document.addEventListener('keydown', (event) => {
+             });
         }
+        // var HotKeyHandler={
+        //     currentMainKey:null,
+        //     currentValueKey:null,
+        //     Init:function(){
+        //         // HotKeyHandler.Register(0,"K",function(){alert("注册成功");});
+        //         HotKeyHandler.Register(0,"Z",function(){
+        //             console.info("HotKeyHandler handler run...")
+        //             return false;
+        //             // var e = getElementsByClassName("targeNode", "p")
+        //             // e.innerHTML="execute a paste"
+        //         });
+        //     },
+//             Register:function(tag,value,func){
+//                 var MainKey="";
+//                 switch(tag){
+//                     case 0:
+//                         MainKey=17; //Ctrl
+//                         break;
+//                     case 1:
+//                         MainKey=16; //Shift
+//                         break;
+//                     case 2:
+//                         MainKey="18"; //Alt
+//                         break;
+//                 }
+//                 document.onkeyup=function(e){
+//                     HotKeyHandler.currentMainKey=null;
+//                 }
+//
+//                 document.onkeydown=function(event){
+// //获取键值
+//                     var keyCode= event.keyCode ;
+//                     var keyValue = String.fromCharCode(event.keyCode);
+//
+//                     if(HotKeyHandler.currentMainKey!=null){
+//                         if(keyValue==value){
+//                             HotKeyHandler.currentMainKey=null;
+//                             if(func!=null) {
+//                                 event.returnValue = func();
+//                             }
+//                         }
+//                     }
+//                     if(keyCode==MainKey) {
+//                         HotKeyHandler.currentMainKey = keyCode;
+//                     }
+//                 }
+//             }
+//         }
     </script>
 </head>
 <body>
@@ -87,6 +86,9 @@
 <p class="targeNode">
     this is placehold
 </p>
-<textarea contenteditable="true" id="test-text" name="nativeBacktrace" autofocus="false"></textarea>
+<a href="https://www.baidu.com" target="_blank"> 百度 </a>
+<p id="test-text1">
+<textarea contenteditable="true" id="test-text2" name="nativeBacktrace" autofocus="false"></textarea>
+</p>
 </body>
 </html>
