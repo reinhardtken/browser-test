@@ -28,14 +28,14 @@ func main() {
 	//router1################################################
 	router := gin.New()
 	//windows
-	//router.Static("/static/", `D:/workspace/code/self/browser-test/html`)
-	//router.Static("/js", `D:/workspace/code/self/browser-test/html/js`)
+	router.Static("/static/", `D:/workspace/code/self/browser-test/html`)
+	router.Static("/js", `D:/workspace/code/self/browser-test/html/js`)
 	//linux
 	//router.Static("/static/", `/home/liuqingping/workspace/code/self/github/browser-test/html`)
 	//router.Static("/js", `/home/liuqingping/workspace/code/self/github/browser-test/html/js`)
 	//mac
-	router.Static("/static/", `/Users/bytedance/workspace/code/self/browser-test/html`)
-	router.Static("/js", `/Users/bytedance/workspace/code/self/browser-test/html/js`)
+	//router.Static("/static/", `/Users/bytedance/workspace/code/self/browser-test/html`)
+	//router.Static("/js", `/Users/bytedance/workspace/code/self/browser-test/html/js`)
 	router.GET("/hello",
 		func(context *gin.Context) {
 			context.String(http.StatusOK, "<p>hello world</p>")
