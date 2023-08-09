@@ -35,12 +35,13 @@ func main() {
 	//router1################################################
 	router := gin.New()
 	//windows
-	//router.Static("/static/", `D:/workspace/code/self/browser-test/html`)
-	//router.Static("/js", `D:/workspace/code/self/browser-test/html/js`)
+	router.Static("/static/", `D:/workspace/code/self/browser-test/html`)
+	router.Static("/js", `D:/workspace/code/self/browser-test/html/js`)
 	//linux
 	//router.Static("/static/", `/home/liuqingping/workspace/code/self/github/browser-test/html`)
 	//router.Static("/js", `/home/liuqingping/workspace/code/self/github/browser-test/html/js`)
 	//mac
+
 	router.Static("/static/", `/Users/bytedance/workspace/code/self/browser-test/html`)
 	router.Static("/js", `/Users/bytedance/workspace/code/self/browser-test/html/js`)
 	router.Static("/webxr/", `/Users/bytedance/workspace/code/self/browser-test/html/webxr-samples`)
@@ -58,6 +59,7 @@ func main() {
 	//router.Static("/static/", path+`/html`)
 	//router.Static("/js", path+`/html/js`)
 	//router.Static("/webxr/", path+`/html/webxr`)
+
 
 	router.GET("/hello",
 		func(context *gin.Context) {
