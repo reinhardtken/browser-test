@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>hello world1</p>
+<p id="hsp">横竖屏</p>
+<p id="hsp2">横竖屏</p>
+<script type="text/javascript">
+    // 监听 orientation changes
+window.addEventListener("orientationchange", function(event) {
+    p = document.getElementById("hsp");
+    p2 = document.getElementById("hsp2");
+    p2.innerText = String(window.orientation);
+    if (window.orientation == 0 || window.orientation == 180) {
+        p.innerText = "竖屏";
+    } else {
+        p.innerText = "横屏";
+    }
+ // 根据event.orientation|screen.orientation.angle等于0|180、90|-90度来判断横竖屏
+}, false);
+</script>
+</body>
+</html>
