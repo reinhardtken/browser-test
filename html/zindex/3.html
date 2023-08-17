@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Z-Index 1</title>
+    <style>
+        div {
+            padding: 25px;
+            font-size: larger;
+        }
+
+        #box1 {
+            background-color: chocolate;
+            width: 200px;
+            height: 100px;
+            margin-bottom: -50px;
+        }
+
+        #content {
+            background-color: gold;
+            width: 200px;
+            height: 100px;
+            margin-left: 50px;
+            z-index: 2;
+            position: relative;
+        }
+
+        #box2 {
+            background-color: cyan;
+            width: 200px;
+            height: 100px;
+            margin-top: -50px;
+            z-index: 1;
+            position: relative;
+        }
+
+        #box2-3 {
+            background-color: green;
+            width: 200px;
+            height: 100px;
+            padding-left: 150px;
+            left: 180px;
+            top: -50px;
+            z-index: 5;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+<div id="box1">
+    Box 1
+</div>
+
+<div id="content">
+    Content <br/>
+    z-index: 2; <br/>
+    position: relative;
+</div>
+
+<div id="box2">
+    <br/><br/>
+    Box 2 <br/>
+    z-index: 1; <br/>
+    position: relative;
+    <div id="box2-3">
+        Box 2-3 <br/>
+        z-index: 5;  <br/>
+        position: absolute;
+    </div>
+</div>
+</body>
+</html>

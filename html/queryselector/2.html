@@ -1,0 +1,47 @@
+<html>
+
+<head>
+    <style>
+        .div1 {
+            color: red;
+        }
+
+        .div2 {
+            color: green;
+        }
+
+        .div3 {
+            color: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="div1">hello 1</div>
+    <div class="div2">hello 2</div>
+    <div class="div3">hello 3</div>
+    <div class="div1">hello 4</div>
+    <div class="div2">hello 5</div>
+    <div class="div3">hello 6</div>
+    <span id="123">curent hover: </span>
+    <a herf="www.baidu.com">www.baidu.com</a>
+    <a herf="www.baidu.com">www.baidu2.com</a>
+    <a herf="www.baidu.com">www.baidu3.com</a>
+    <a herf="www.baidu.com">www.baidu4.com</a>
+    <script>
+        const button = document.querySelector(".div1");
+        const text = document.querySelector("#123");
+        button.addEventListener("click", (event) => {
+            alert("hello");
+        });
+
+
+        var int = self.setInterval("clock()", 1000);
+        function clock() {
+            const div = document.querySelector("div : hover");
+            text.innerHTML = div.innerHTML;
+        }
+    </script>
+</body>
+
+</html>
