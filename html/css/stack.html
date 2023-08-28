@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body {
+            margin: 20px;
+            background: yellow;
+        }
+        .box {
+            margin-left: 50px;
+            background: red;
+            width: 300px;
+            height: 100px;
+            position: relative;
+            z-index: 0;
+
+        }
+        .box > span {
+            position: absolute;
+        }
+        .box > img {
+            z-index: -1;
+            position: relative;
+            vertical-align: top;
+        }
+    </style>
+</head>
+<body>
+<div class="box">
+    <span>2222</span>
+    <img src="1.png">
+</div>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <style>
+            .div1 {
+                color: red;
+            }
+            .div2 {
+                color: green;
+            }
+            .div3 {
+                color: blue;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="div1">hello 1</div>
+        <div class="div2">hello 2</div>
+        <div class="div3">hello 3</div>
+        <div class="div1">hello 4</div>
+        <div class="div2">hello 5</div>
+        <div class="div3">hello 6</div>
+        <script>
+            const button = document.querySelector(".div1");
+    
+            button.addEventListener("click", (event) => {
+                alert("hello");
+            });
+        </script>
+    </body>
+</html>

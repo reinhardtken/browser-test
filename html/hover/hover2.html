@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>hover测试</title>
+    <style>
+        a:hover
+        {
+            background-color:yellow;
+        }
+        /*button:hover*/
+        /*{*/
+        /*    background-color:yellow;*/
+        /*}*/
+
+        input:hover
+        {
+            background-color:yellow;
+        }
+        textarea:hover
+        {
+            background-color:yellow;
+        }
+        body {
+            background-image: url("1.jpg");
+        }
+    </style>
+
+    <script>
+        const button = document.querySelector("button");
+
+        button.addEventListener("click", (event) => {
+            button.textContent = `Click count: ${event.detail}`;
+        });
+    </script>
+</head>
+
+<body>
+<p><a href="https://www.runoob.com/">测试链接1</a></p>
+
+<p><a href="https://c.runoob.com">测试链接2</a></p>
+
+<p><button>测试按钮</button></p>
+
+<p>
+    <a href="https://www.runoob.com/">
+        <img onmouseover="bigImg(this)" onmouseout="normalImg(this)" border="0" src="smiley.gif" alt="Smiley" width="32" height="32">
+</p>
+
+
+    <p>
+        不可点击对象1
+    </p>
+<p>
+    不可点击对象2
+</p>
+<p>
+    不可点击对象3
+</p>
+    <br>
+    <br>
+
+<p>
+    <form action="demo-form.php">
+        First name: <input type="text" name="FirstName" value="文本测试1"><br>
+        Last name: <input type="text" name="LastName" value="文本测试2"><br>
+        <input type="submit" value="表单提交测试">
+    </form>
+</p>
+
+
+
+    <p>
+        <input type="radio" value="1" name="a"/>测试单选按钮1
+        <input type="radio" value="2" name="b"/>测试单选按钮2
+    </p>
+
+<p>
+    <input type="checkbox" value="1" name="a"/>测试多选按钮1
+    <input type="checkbox" value="2" name="b"/>测试多选按钮2
+</p>
+
+<p>
+    <textarea name="a" clols="30" rows="10">测试文本区域</textarea>
+</p>
+
+
+
+
+</body>
+</html>

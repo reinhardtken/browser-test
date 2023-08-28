@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Z-Index Sample 1</title>
+    <style>
+        main > div {
+            font-weight: bolder;
+            border: 1px dashed;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .static {
+            position: static;
+            height: 80px;
+            background-color: #ffc;
+        }
+
+        .absolute {
+            position: absolute;
+            width: 150px;
+            height: 350px;
+            background-color: #fdd;
+        }
+
+        .relative {
+            position: relative;
+            height: 80px;
+            background-color: #cfc;
+        }
+
+        #div1 {
+            top: 10px;
+            left: 10px;
+        }
+
+        #div2 {
+            top: 30px;
+            margin: 100px 50px 0px 50px;
+        }
+
+        #div3 {
+            top: 15px;
+            left: 20px;
+            margin: 0px 50px 0px 50px;
+        }
+
+        #div4 {
+            top: 10px;
+            right: 10px;
+        }
+
+        #div5 {
+            background-color: #ffc;
+            margin: 50px 150px 0px 150px;
+            float: right;
+        }
+
+        #div6 {
+            background-color: #ffc;
+            margin: 10px 50px 0px 50px;
+        }
+    </style>
+</head>
+<body>
+<main>
+    <div id="div1" class="absolute">
+        DIV #1<br/>
+        position: absolute;
+    </div>
+    <div id="div2" class="relative">
+        DIV #2<br/>
+        position: relative;
+    </div>
+    <div id="div3" class="relative">
+        DIV #3 <br/>
+        position: relative;
+    </div>
+    <div id="div4" class="absolute">
+        DIV #4<br/>
+        position: absolute;
+    </div>
+    <div id="div5" class="static">
+        DIV #5<br/>
+        position: static;<br/>
+        float: right;
+    </div>
+    <div id="div6" class="static">
+        DIV #6<br/>
+        position: static;
+    </div>
+</main>
+
+</body>
+</html>

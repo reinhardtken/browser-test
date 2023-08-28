@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Z-Index 1</title>
+    <style>
+        div {
+            padding: 25px;
+            font-size: larger;
+        }
+
+        #box1 {
+            background-color: chocolate;
+            width: 200px;
+            height: 100px;
+            margin-bottom: -50px;
+        }
+
+        #content {
+            background-color: gold;
+            width: 300px;
+            height: 200px;
+            z-index: 2;
+        }
+
+        #box2 {
+            background-color: cyan;
+            width: 200px;
+            height: 100px;
+            margin-top: -50px;
+            z-index: 1;
+        }
+    </style>
+</head>
+<body>
+<div id="box1">
+    Box 1
+</div>
+
+<div id="content">
+    Content <br/>
+    z-index: 2;
+</div>
+
+<div id="box2">
+    Box 2 <br/>
+    z-index: 1;
+</div>
+</body>
+</html>

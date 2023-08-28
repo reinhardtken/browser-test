@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+   #ANIM-DIV {
+      margin: 10px;
+      width: 400px;
+      height: 100px;
+      background: lightgreen;
+      position: relative;
+      font-size: 30px;
+      animation-name: animMove;
+      animation-duration: 5s;
+   }
+   @-webkit-keyframes animMove {
+      from {top: 0px;}
+      to {top: 200px;}
+   }
+</style>
+</head>
+<body>
+<div id="ANIM-DIV"></div>
+<script>
+   var x = document.getElementById("ANIM-DIV");
+   x.addEventListener("animationstart", myAnimFunction);
+   function myAnimFunction(event) {
+      this.innerHTML = "The animation-name is: " + event.animationName
+      + " " + String(event.elapsedTime);
+   }
+</script>
+</body>
+</html>
