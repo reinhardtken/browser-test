@@ -1,0 +1,39 @@
+<html>
+    <body> 
+        <style>
+            .target {
+                width: 80px;
+                height: 80px;
+                background-color: green;
+                -webkit-animation: swing 3s linear 1;
+            }
+    
+            @-webkit-keyframes swing {
+                from { transform: rotate(0deg); }
+                to   { transform: rotate(90deg); }
+            }
+        </style>
+        <div id="div1" class="target"></div>
+	<div id="div2" style="margin-top: -30px; border: solid 1px red;"> hello world</div>
+	<!-- <div id = "div2"> hello world</div> -->
+
+    <!-- <script>
+        var o = document.getElementById("div1");
+// 动画开始时事件
+o.addEventListener("webkitAnimationStart", function() {
+    console.log("动画开始");
+})
+// 动画重复运动时事件
+o.addEventListener("webkitAnimationIteration", function() {
+    console.log("动画重复运动");
+})
+// 动画结束时事件
+o.addEventListener("webkitAnimationEnd", function() {
+    console.log("动画结束");
+    let deg=60;
+    o.style.transform = `rotate(${deg}deg)`;
+})
+
+    </script> -->
+        </body>
+</html>

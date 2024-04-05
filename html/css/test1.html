@@ -2,21 +2,20 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    
     <style>
-        nav a {display: block;}
+        div {background: red;}
     </style>
 </head>
 <body>
-<!--nav 默认是inline布局-->
-<nav>
-    <a href="index.html">WidgetCo Home</a>
-    <a href="products.html">Products</a>
-    <a href="services.html">Services</a>
-    <a href="fun.html">Widgety Fun!</a>
-    <a href="support.html">Support</a>
-    <a href="about.html" id="current">About Us</a>
-    <a href="contact.html">Contact</a>
-</nav>
+<div id="div1">hello world</div>
+
+<script>
+    function doSomething() {
+        div = document.getElementById("div1");
+        div.style.backgroundColor = 'green';
+    }
+    setInterval(doSomething, 5000);
+</script>
 </body>
 </html>
