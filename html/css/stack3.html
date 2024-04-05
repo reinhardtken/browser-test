@@ -9,7 +9,7 @@
             height: 100px;
             margin-bottom: 50px;
             position: relative;
-            z-index: 0;    /* 只是为了创建层叠上下文 */
+            z-index: 0; 
         }
         .box > .parentA {
             background: yellow;
@@ -55,25 +55,28 @@
 <script>
     var x = document.getElementById("yello");
     x.addEventListener("click", MakeonClick("yello"));
-    function MakeonClick(content) {
+    function MakeonClick(content, goon) {
         return function click(event) {
             alert(content);
-            event.stopPropagation();
+            if (goon)
+                event.stopPropagation();
         }
     }
 
     x = document.getElementById("red");
-    x.addEventListener("click", MakeonClick("red"));
+    x.addEventListener("click", MakeonClick("red", true));
 
     x = document.getElementById("blue");
-    x.addEventListener("click", MakeonClick("blue"));
+    x.addEventListener("click", MakeonClick("blue"), false);
 
     function greenAlert(event) {
         alert("green2");
-        event.stopPropagation();
+        //event.stopPropagation();
     }
     var xgreen = document.getElementById("green");
-    xgreen.addEventListener("click", greenAlert);
+    // xgreen.addEventListener("click", greenAlert);
+
+    xgreen.addEventListener("click", MakeonClick("green", false));
 </script>
 </body>
 </html>

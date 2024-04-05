@@ -8,5 +8,20 @@
 <div id="green" style="width: 100px; height: 100px; background: green; position: absolute; top: 25px; left: 25px;">helloooooooo</div>
 <div id="blue" style="width: 100px; height: 100px; background: blue;transform: rotate3d(0, 0, 1, 25deg); transform-origin: 0 0">world</div>
 </div>
+<script>
+    var x = document.getElementById("green");
+    x.addEventListener("click", MakeonClick("green"));
+    function MakeonClick(content, goon) {
+        return function click(event) {
+            alert(content);
+            if (goon)
+                event.stopPropagation();
+        }
+    }
+
+    x = document.getElementById("blue");
+    x.addEventListener("click", MakeonClick("blue", true));
+
+</script>
 </body>
 </html>

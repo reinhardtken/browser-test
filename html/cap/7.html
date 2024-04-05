@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<body>
+    <canvas id="canvas1" style="background:red;width: 100px;height: 100px">
+    </canvas>
+    <div id="overlap" style="background:green;margin-top:-50px;margin-left:50px;width: 100px;height: 100px">
+        <span id="span1">hello world</span>
+    </div>
+    <script>
+        function MakeonClick(content) {
+            return function click(event) {
+                alert(content);
+                //event.stopPropagation();
+            }
+        }
+
+        x = document.getElementById("span1");
+        x.addEventListener("click", MakeonClick("span1"));
+        x = document.getElementById("canvas1");
+        x.addEventListener("click", MakeonClick("canvas1"));
+    </script>
+
+</body>
+
+</html>
